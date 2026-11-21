@@ -46,7 +46,7 @@
       <li data-t="simpel-mutu: SPMI → Renstra → Monev → AMI → Akreditasi" data-r="ok">PASS</li>
       <li data-t="neo-integrator: Excel → staging → validasi → PostgreSQL" data-r="ok">PASS</li>
       <li data-t="migrant-center: jobs → placements → courses → digital card" data-r="ok">PASS</li>
-      <li data-t="data-center: data HR 100+ karyawan, 3 level akses" data-r="ok">PASS</li>
+      <li data-t="employee-data: profil → kerabat → dokumen" data-r="ok">PASS</li>
       <li data-t="input nilai: beberapa hari → ±1 hari" data-r="ok">PASS</li>
     </ol>
     <p class="term-sum" id="sum"><b>5</b> lulus, <b>0</b> gagal</p>
@@ -145,13 +145,15 @@
       <button class="card-h" aria-expanded="false">
         <span class="when">PT. Walden Global Services · 2024</span>
         <h3>Data Center Management</h3>
-        <p>Aplikasi pendataan karyawan dengan tiga level akses.</p>
-        <span class="chips"><em>React</em><em>Express.js</em><em>PostgreSQL</em></span><span class="plus" aria-hidden="true"></span>
+        <p>Backend sistem pendataan karyawan WGS untuk mengelola informasi personal, kerabat, dan dokumen karyawan dengan Express.js dan PostgreSQL.</p>
+        <span class="chips"><em>Node.js</em><em>Express.js</em><em>PostgreSQL</em><em>JWT</em></span><span class="plus" aria-hidden="true"></span>
       </button>
       <div class="more"><ul>
-        <li>Autentikasi JWT, enkripsi password bcrypt, akses karyawan, admin, dan super admin.</li>
-        <li>Mendigitalisasi data HR 100+ karyawan: dokumen dan sertifikat, notifikasi, reset password via OTP email.</li>
-        <li>Tema logo dan warna per perusahaan.</li>
+        <li>Mengelola profil karyawan, informasi kerabat, dan dokumen seperti KTP, NPWP, ijazah, transkrip, serta CV.</li>
+        <li>Menyediakan akses terpisah untuk karyawan, admin, dan super admin dengan autentikasi JWT dan password yang di-hash.</li>
+        <li>Dashboard admin merangkum karyawan aktif, resign, data karyawan baru, dan statistik per bulan.</li>
+        <li>Mendukung pengajuan perubahan data atau dokumen untuk ditinjau admin, serta pengelolaan resign dan rehire.</li>
+        <li>Fitur notifikasi dan reset password melalui OTP email.</li>
       </ul></div>
     </article>
   </div>
