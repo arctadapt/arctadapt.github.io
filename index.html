@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="css/style.css" />
-<script>try{var t=localStorage.getItem("theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.dataset.theme=t}catch(e){}</script>
+<script>try{var t=localStorage.getItem("theme")||"dark";document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
 <body>
 <div class="progress" aria-hidden="true"></div>
@@ -35,6 +35,7 @@
   <div class="hero-copy">
     <p class="hello"><img src="assets/amai.jpg" alt="Foto Sam" /> Bandung, Indonesia</p>
     <h1 aria-label="Sam"><span class="w"><b>Sam</b></span></h1>
+    <span class="pixel-mark" aria-hidden="true"></span>
     <p class="role">Backend Developer dan Quality Assurance</p>
     <p class="lead">Saya membangun aplikasi web dan mengotomatisasi penjaminan kualitas. Sistem penjaminan mutu perguruan tinggi buatan saya berjalan paperless, dan proses input nilai yang tadinya makan beberapa hari kini selesai dalam sekitar satu hari.</p>
     <div class="cta"><a class="btn" href="#proyek">Lihat proyek</a><a class="btn ghost" href="#kontak">Hubungi saya</a></div>
@@ -52,11 +53,11 @@
   </aside>
 </header>
 
-<section class="stats wrap" aria-label="Angka penting">
-  <div><strong data-n="4">0</strong><span>jenis pengguna di Migrant Center</span></div>
+<section class="stats wrap" aria-label="Pencapaian utama">
+  <div><strong data-n="1">0</strong><span>tahun pengalaman profesional</span></div>
+  <div><strong data-n="4">0</strong><span>proyek unggulan</span></div>
   <div><strong data-n="100" data-suf="+">0</strong><span>data karyawan terkelola</span></div>
-  <div><strong data-n="3">0</strong><span>level akses di Data Center</span></div>
-  <div><strong data-n="2">0</strong><span>tempat kerja backend</span></div>
+  <div><strong>±1 hari</strong><span>proses input nilai, dari beberapa hari</span></div>
 </section>
 
 <main>
