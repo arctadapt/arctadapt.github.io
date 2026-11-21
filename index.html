@@ -45,7 +45,7 @@
     <ol class="term-body" id="term">
       <li data-t="simpel-mutu: SPMI → Renstra → Monev → AMI → Akreditasi" data-r="ok">PASS</li>
       <li data-t="neo-integrator: Excel → staging → validasi → PostgreSQL" data-r="ok">PASS</li>
-      <li data-t="migrant-center: JWT, refresh token, OTP, 4 jenis pengguna" data-r="ok">PASS</li>
+      <li data-t="migrant-center: jobs → placements → courses → digital card" data-r="ok">PASS</li>
       <li data-t="data-center: data HR 100+ karyawan, 3 level akses" data-r="ok">PASS</li>
       <li data-t="input nilai: beberapa hari → ±1 hari" data-r="ok">PASS</li>
     </ol>
@@ -129,13 +129,16 @@
       <button class="card-h" aria-expanded="false">
         <span class="when">PT. Pakuan Pajajaran Anyar · 2026</span>
         <h3>Migrant Center</h3>
-        <p>Backend REST API untuk migran, perusahaan, P3MI, dan administrator.</p>
+        <p>Backend API Migran Hub untuk mendukung profil migran, perusahaan, P3MI, lowongan dan lamaran kerja, penempatan, serta pelatihan dalam satu platform.</p>
         <span class="chips"><em>Node.js</em><em>Express.js</em><em>PostgreSQL</em><em>Sequelize</em></span><span class="plus" aria-hidden="true"></span>
       </button>
       <div class="more"><ul>
-        <li>Melayani 4 jenis pengguna dengan role-based authorization.</li>
-        <li>Autentikasi JWT dengan refresh token dan reset password via OTP email.</li>
-        <li>Diamankan dengan Helmet, CORS whitelist, dan rate limiting.</li>
+        <li>Autentikasi JWT dan refresh token, pendaftaran migran, perusahaan, dan P3MI, serta role-based authorization.</li>
+        <li>Profil migran dengan pengelolaan skill dan bahasa, profil perusahaan dan P3MI.</li>
+        <li>Manajemen lowongan, lamaran kerja, pelacakan aplikasi, dan riwayat penempatan.</li>
+        <li>Pelatihan dan kursus dengan enrollment, materi, kuis, pelacakan progres, review, dan sertifikat.</li>
+        <li>Kartu migran digital ber-QR, notifikasi, pengaduan, serta administrasi master data.</li>
+        <li>Keamanan API dengan Helmet, CORS whitelist, dan rate limiting.</li>
       </ul></div>
     </article>
     <article class="card rv" data-tilt>
