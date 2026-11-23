@@ -2,8 +2,6 @@
 
 Personal portfolio website showcasing my experience as a **Backend Developer & Quality Assurance**, selected projects, technical skills, and professional background.
 
-🌐 **Live Website:** https://v0-ssamm-dev.vercel.app/
-
 ## About
 
 A responsive, single-page developer portfolio built with HTML, CSS, and JavaScript. The site highlights my experience in backend development, software quality assurance, and building practical web solutions.
