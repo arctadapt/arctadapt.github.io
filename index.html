@@ -1,254 +1,211 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Primary Meta Tags -->
-    <title>Portfolio</title>
-    <sect id="intro">
-    <meta name="title" content="Portfolio" />
-    <meta
-      name="description"
-      content="Build or customize your portfolio website using this super easy template. Free to use if you are a member of the community or a contributor to this project"
-    />
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sam · Backend Developer &amp; QA</title>
+<meta name="description" content="Backend Developer dan Quality Assurance di Bandung. Membangun REST API, sistem penjaminan mutu perguruan tinggi, dan integrasi data akademik." />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+<link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png" />
+<link rel="manifest" href="assets/favicon/site.webmanifest" />
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<script>try{var t=localStorage.getItem("theme")||"dark";document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+<nav class="nav">
+  <div class="wrap nav-in">
+    <a href="#top" class="brand">sam<span>.dev</span></a>
+    <ul class="menu" id="menu">
+      <li><a href="#pengalaman">Pengalaman</a></li>
+      <li><a href="#pendidikan">Pendidikan</a></li>
+      <li><a href="#proyek">Proyek</a></li>
+      <li><a href="#keahlian">Keahlian</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+      <li><a class="btn small" href="cv.pdf" target="_blank" rel="noopener">Unduh CV</a></li>
+    </ul>
+    <button class="icon-btn" id="theme" aria-label="Ganti tema"><span class="knob"></span></button>
+    <button class="icon-btn burger" id="burger" aria-label="Buka menu" aria-expanded="false"><i></i><i></i></button>
+  </div>
+</nav>
 
-    <!-- Link -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/assets/favicon/favicon-16x16.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="assets/favicon/android-chrome-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="512x512"
-      href="assets/favicon/android-chrome-512x512.png"
-    />
-    <link rel="manifest" href="assets/favicon/site.webmanifest" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/utilities.css" />
-  </head>
-  <body>
-    <header id="hero">
-      <!-- Navbar -->
-      <nav class="navbar">
-        <div class="container">
-          <!-- Navbar links -->
-          <ul class="nav-menu">
-            <li><a class="nav-link" href="#intro">INTRODUCTION</a></li>
-            <li><a class="nav-link" href="#contact">CONTACT</a></li>
-            <li><a class="nav-link" href="#projects">PROJECTS</a></li>
-            <li>
-              <a class="nav-link btn btn-primary" href="cv.pdf" target="_blank">
-                Lihat CV <i class="fas fa-file-pdf"></i>
-              </a>                   
-            </li>
-      
-            <!-- Toggle switch -->
-            <div class="theme-switch">
-              <input type="checkbox" id="switch" />
-              <label class="toggle-icons" for="switch">
-                <img class="moon" src="assets/moon.svg" />
-                <img class="sun" src="assets/sun.svg" />
-              </label>
-            </div>
-            <!-- Hamburger menu -->
-          </ul>
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-        </div>
-      </nav>
+<header id="top" class="hero wrap">
+  <div class="hero-copy">
+    <p class="hello"><img src="assets/amai.jpg" alt="Foto Sam" /> Bandung, Indonesia</p>
+    <h1 aria-label="Sam"><span class="w"><b>Sam</b></span></h1>
+    <span class="pixel-mark" aria-hidden="true"></span>
+    <p class="role">Backend Developer dan Quality Assurance</p>
+    <p class="lead">Saya membangun aplikasi web dan mengotomatisasi penjaminan kualitas. Sistem penjaminan mutu perguruan tinggi buatan saya berjalan paperless, dan proses input nilai yang tadinya makan beberapa hari kini selesai dalam sekitar satu hari.</p>
+    <div class="cta"><a class="btn" href="#proyek">Lihat proyek</a><a class="btn ghost" href="#kontak">Hubungi saya</a></div>
+  </div>
+  <aside class="term" aria-label="Ringkasan hasil kerja" data-tilt>
+    <div class="term-bar"><i></i><i></i><i></i><span>portfolio.log — sam</span></div>
+    <ol class="term-body" id="term">
+      <li data-t="simpel-mutu: SPMI → Renstra → Monev → AMI → Akreditasi" data-r="ok">PASS</li>
+      <li data-t="neo-integrator: Excel → staging → validasi → PostgreSQL" data-r="ok">PASS</li>
+      <li data-t="migrant-center: jobs → placements → courses → digital card" data-r="ok">PASS</li>
+      <li data-t="employee-data: profil → kerabat → dokumen" data-r="ok">PASS</li>
+      <li data-t="input nilai: beberapa hari → ±1 hari" data-r="ok">PASS</li>
+    </ol>
+    <p class="term-sum" id="sum"><b>5</b> lulus, <b>0</b> gagal</p>
+  </aside>
+</header>
 
-      <section class="header-container">
-        <img
-          class="profile-image"
-          src="assets/amai.jpg"
-          alt=""
-        />
-        <h1>Hi I'm Mochamad Syami Hardyana</h1>
+<section class="stats wrap" aria-label="Pencapaian utama">
+  <div><strong data-n="1">0</strong><span>tahun pengalaman profesional</span></div>
+  <div><strong data-n="4">0</strong><span>proyek unggulan</span></div>
+  <div><strong data-n="100" data-suf="+">0</strong><span>data karyawan terkelola</span></div>
+  <div><strong>±1 hari</strong><span>proses input nilai, dari beberapa hari</span></div>
+</section>
 
-        <div class="content-text">
-          <h2>Building scalable</h2>
-          <h2>systems, seamless experiences.</h2>          
+<main>
+<section id="pengalaman" class="wrap sec">
+  <h2 class="rv">Pengalaman kerja</h2>
+  <div class="tl">
+    <article class="tl-item rv">
+      <time>Jun 2026 – Nov 2026</time>
+      <h3>Backend Developer</h3><p class="org">PT. Pakuan Pajajaran Anyar, Bandung</p>
+      <p>Mengembangkan SIMPEL-MUTU, fitur tambahan Campus-Integrator, dan REST API Migrant Center.</p>
+    </article>
+    <article class="tl-item rv">
+      <time>Jun 2024 – Nov 2024</time>
+      <h3>Backend Developer Internship</h3><p class="org">PT. Walden Global Services, Bandung</p>
+      <p>Membangun aplikasi pendataan karyawan dengan React, Express.js, dan PostgreSQL.</p>
+    </article>
+  </div>
+</section>
 
-          <p>
-            A Fullstack Developer with experience in frontend development using React and Material-UI,
-            as well as backend development with Express.js, PostgreSQL, and API design.
-          </p>
-        </div>
-        <a
-          href="https://github.com/arctadapt"
-          class="btn btn-secondary"
-          target="_blank"
-          >Connect With Me</a
-        >
-      </section>
-    </header>
+<section id="pendidikan" class="wrap sec">
+  <h2 class="rv">Pendidikan</h2>
+  <div class="education-grid">
+    <article class="education-card rv">
+      <time>2026 – sekarang</time>
+      <h3>S1 Sistem Informasi</h3>
+      <p class="org">Universitas Terbuka Bandung</p>
+    </article>
+    <article class="education-card rv">
+      <time>2022 – 2025</time>
+      <h3>Pengembangan Perangkat Lunak &amp; Game</h3>
+      <p class="org">SMK Prakarya Internasional</p>
+      <p>GPA 87,66; turut mengelola keuangan OSIS.</p>
+    </article>
+  </div>
+</section>
 
-    <!-- Projects -->
-    <section id="contact" class="project-container container">
-      <div class="division"></div>
-      <div class="content-text">
-        <h2>Contact</h2>
-        <p>
-          <a href="mailto:mochammadsyamihardiana@gmail.com">mochammadsyamihardiana@gmail.com</a>
-          <br>
-          <a href="https://www.instagram.com/zsevenss" target="_blank">@zsevenss</a>
-        </p>
-      </div>
+<section id="proyek" class="wrap sec">
+  <h2 class="rv">Proyek</h2>
+  <p class="sub rv">Klik kartu untuk melihat detail.</p>
+  <div class="grid">
+    <article class="card rv" data-tilt>
+      <button class="card-h" aria-expanded="false">
+        <span class="when">PT. Pakuan Pajajaran Anyar · 2026</span>
+        <h3>SIMPEL-MUTU (SIAMI)</h3>
+        <p>Platform manajemen mutu perguruan tinggi untuk mengintegrasikan pengelolaan standar SPMI, perencanaan strategis, monitoring dan evaluasi, audit mutu internal, hingga akreditasi dalam satu sistem terpusat.</p>
+        <span class="chips"><em>Web app</em><em>RBAC</em><em>PDF/Excel</em></span><span class="plus" aria-hidden="true"></span>
+      </button>
+      <div class="more"><ul>
+        <li>Menyatukan alur Renstra, Renop, Program, Monev, AMI, RTM, dan tindak lanjut.</li>
+        <li>Mengotomatisasi capaian indikator (IKU, IKT, Standar SPMI), skor Monev, skor risiko, serapan anggaran, termasuk cascading dari sasaran strategis ke program.</li>
+        <li>Audit Mutu Internal digital: penugasan, checklist, temuan, CAPA, tanda tangan digital, dokumen ber-QR, audit trail, dan laporan PDF/Excel.</li>
+      </ul></div>
+    </article>
+    <article class="card rv" data-tilt>
+      <button class="card-h" aria-expanded="false">
+        <span class="when">PT. Pakuan Pajajaran Anyar · 2026</span>
+        <h3>Campus Integrator</h3>
+        <p>Mengembangkan aplikasi berbasis PHP untuk mengotomatisasi pengelolaan dan sinkronisasi data akademik ke Neo Feeder PDDIKTI, mencakup import Excel, data staging, validasi, audit AKM, transaksi PostgreSQL, dan pencatatan aktivitas.</p>
+        <span class="chips"><em>PHP</em><em>Excel</em><em>PostgreSQL</em></span><span class="plus" aria-hidden="true"></span>
+      </button>
+      <div class="more"><ul>
+        <li>Mengimpor data akademik dari Excel ke staging untuk diperiksa sebelum sinkronisasi.</li>
+        <li>Memvalidasi data dan mengaudit AKM, termasuk mendeteksi serta melengkapi data AKM yang kosong.</li>
+        <li>Mengelola sinkronisasi ke Neo Feeder PDDIKTI melalui transaksi PostgreSQL.</li>
+        <li>Mencatat aktivitas untuk membantu pelacakan perubahan dan proses sinkronisasi.</li>
+      </ul></div>
+    </article>
+    <article class="card rv" data-tilt>
+      <button class="card-h" aria-expanded="false">
+        <span class="when">PT. Pakuan Pajajaran Anyar · 2026</span>
+        <h3>Migrant Center</h3>
+        <p>Backend API Migran Hub untuk mendukung profil migran, perusahaan, P3MI, lowongan dan lamaran kerja, penempatan, serta pelatihan dalam satu platform.</p>
+        <span class="chips"><em>Node.js</em><em>Express.js</em><em>PostgreSQL</em><em>Sequelize</em></span><span class="plus" aria-hidden="true"></span>
+      </button>
+      <div class="more"><ul>
+        <li>Autentikasi JWT dan refresh token, pendaftaran migran, perusahaan, dan P3MI, serta role-based authorization.</li>
+        <li>Profil migran dengan pengelolaan skill dan bahasa, profil perusahaan dan P3MI.</li>
+        <li>Manajemen lowongan, lamaran kerja, pelacakan aplikasi, dan riwayat penempatan.</li>
+        <li>Pelatihan dan kursus dengan enrollment, materi, kuis, pelacakan progres, review, dan sertifikat.</li>
+        <li>Kartu migran digital ber-QR, notifikasi, pengaduan, serta administrasi master data.</li>
+        <li>Keamanan API dengan Helmet, CORS whitelist, dan rate limiting.</li>
+      </ul></div>
+    </article>
+    <article class="card rv" data-tilt>
+      <button class="card-h" aria-expanded="false">
+        <span class="when">PT. Walden Global Services · 2024</span>
+        <h3>Data Center Management</h3>
+        <p>Backend sistem pendataan karyawan WGS untuk mengelola informasi personal, kerabat, dan dokumen karyawan dengan Express.js dan PostgreSQL.</p>
+        <span class="chips"><em>Node.js</em><em>Express.js</em><em>PostgreSQL</em><em>JWT</em></span><span class="plus" aria-hidden="true"></span>
+      </button>
+      <div class="more"><ul>
+        <li>Mengelola profil karyawan, informasi kerabat, dan dokumen seperti KTP, NPWP, ijazah, transkrip, serta CV.</li>
+        <li>Menyediakan akses terpisah untuk karyawan, admin, dan super admin dengan autentikasi JWT dan password yang di-hash.</li>
+        <li>Dashboard admin merangkum karyawan aktif, resign, data karyawan baru, dan statistik per bulan.</li>
+        <li>Mendukung pengajuan perubahan data atau dokumen untuk ditinjau admin, serta pengelolaan resign dan rehire.</li>
+        <li>Fitur notifikasi dan reset password melalui OTP email.</li>
+      </ul></div>
+    </article>
+    <article class="card rv" data-tilt>
+      <button class="card-h" aria-expanded="false">
+        <span class="when">Proyek pribadi · 2026 · Live</span>
+        <h3>Étudiant — Toko Jajanan Online</h3>
+        <p>Website toko jajanan online dengan katalog menu, keranjang belanja, checkout yang terhubung ke WhatsApp, serta dashboard admin untuk mengelola menu dan pesanan.</p>
+        <span class="chips"><em>Next.js</em><em>PostgreSQL</em><em>Vercel Blob</em><em>WhatsApp</em></span><span class="plus" aria-hidden="true"></span>
+      </button>
+      <div class="more"><ul>
+        <li>Pelanggan dapat melihat menu, menambahkan produk ke keranjang, dan checkout melalui WhatsApp.</li>
+        <li>Admin dapat mengelola foto, harga, ketersediaan menu, dan pesanan.</li>
+        <li>Mendukung pendaftaran dan login pengguna dengan sesi berbasis cookie.</li>
+      </ul></div>
+      <div class="card-actions"><a class="project-live" href="https://etudiant-ux.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Buka website Étudiant di tab baru">Lihat Website <span aria-hidden="true">↗</span></a></div>
+    </article>
+    <article class="card rv" data-tilt>
+      <button class="card-h" aria-expanded="false">
+        <span class="when">Proyek pribadi · 2026 · Live</span>
+        <h3>Arsiva</h3>
+        <p>Aplikasi manajemen peminjaman barang dan ruangan sekolah dengan alur pengajuan, persetujuan admin, konfirmasi PIC kelas melalui WhatsApp, notifikasi, dan riwayat peminjaman.</p>
+        <span class="chips"><em>React</em><em>Vite</em><em>Express.js</em><em>PostgreSQL</em></span><span class="plus" aria-hidden="true"></span>
+      </button>
+      <div class="more"><ul>
+        <li>Pengajuan peminjaman barang dan penjadwalan ruangan.</li>
+        <li>Alur persetujuan admin dan pencatatan keputusan PIC kelas.</li>
+        <li>Riwayat peminjaman dan notifikasi berbasis peran.</li>
+      </ul></div>
+      <div class="card-actions"><a class="project-live" href="https://v0-arsiva.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Buka website Arsiva di tab baru">Lihat Website <span aria-hidden="true">↗</span></a></div>
+    </article>
+  </div>
+  <p class="more-link rv">Proyek pribadi lainnya (Photobooth, RPPO, dan Pendataan Sekolah) ada di <a href="https://github.com/arctadapt" target="_blank" rel="noopener">GitHub</a>.</p>
+</section>
 
-          <!-- Projects -->
-    <section id="projects" class="project-container container">
-      <div class="division"></div>
-      <div class="content-text">
-        <h2>Projects</h2>
-        <p>Check out some of my personal projects</p>
-      </div>
+<section id="keahlian" class="wrap sec">
+  <h2 class="rv">Keahlian</h2>
+  <dl class="skills">
+    <div class="rv"><dt>Teknis</dt><dd><span>Backend Development</span><span>REST API</span><span>Quality Assurance</span><span>SOP</span><span>5S Implementation</span><span>Video Editing</span></dd></div>
+    <div class="rv"><dt>Tools</dt><dd><span>VSCode</span><span>Postman</span><span>Jira</span><span>GitHub</span><span>GitLab</span><span>DB Diagram</span><span>Figma</span></dd></div>
+    <div class="rv"><dt>Office &amp; desain</dt><dd><span>Excel (Pivot Table, VLOOKUP, XLOOKUP)</span><span>Word</span><span>PowerPoint</span><span>Canva</span></dd></div>
+    <div class="rv"><dt>Soft skill</dt><dd><span>Disiplin</span><span>Adaptif</span><span>Cepat belajar</span><span>Problem solving</span><span>Time management</span><span>Leadership</span></dd></div>
+  </dl>
+</section>
 
-      <article class="project">
-        <!-- Project 1 -->
-        <div href="" class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Project Pendataan Karyawan</h3>
-              <p>React, Express</p>
-            </div>
-
-            <div class="project-link">
-              <!--<a href="https://github.com/adkunw/WGS_Employee_Data_FrontEnd" target="_blank"><i class="fab fa-github"></i></a> -->
-              <!-- <a href="#" target="_blank"><i class="fas fa-globe"></i></a> -->
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div href="" class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Project Peminjaman Barang</h3>
-              <p>React + Vite, Express</p>
-            </div>
-
-            <div class="project-link">
-              <!--<a href="https://github.com/arctadapt/FE-Peminjaman" target="_blank"><i class="fab fa-github"></i></a> -->
-              <!-- <a href="#" target="_blank"><i class="fas fa-globe"></i></a> -->
-            </div>
-          </div>
-        </div>
-
-        <!-- Porject 3 -->
-        <div href="" class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Project Photobooth (arctabooth)</h3>
-              <p>TypeScript</p>
-            </div>
-
-            <div class="project-link">
-              <!--<a href="https://github.com/arctadapt/arctabooth" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="https://photobooth-by-arctadapt.vercel.app/" target="_blank"><i class="fas fa-globe"></i></a> -->
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div href="" class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Project RPPO</h3>
-              <p>React + Vite, Express</p>
-            </div>
-
-            <div class="project-link">
-              <!--<a href="https://github.com/mangcecep/RPP-Frontend" target="_blank"><i class="fab fa-github"></i></a> -->
-              <!-- <a href="#" target="_blank"><i class="fas fa-globe"></i></a> -->
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 5 -->
-        <div href="" class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Project Pendataan Sekolah</h3>
-              <p>PHP</p>
-            </div>
-
-            <div class="project-link">
-              <!--<a href="https://github.com/arctadapt/PENDATAAN-SEKOLAH" target="_blank"><i class="fab fa-github"></i></a> -->
-              <!-- <a href="#" target="_blank"><i class="fas fa-globe"></i></a> -->
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 6 -->
-        <div href="" class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Project Etudiant</h3>
-              <p>PHP</p>
-            </div>
-
-            <div class="project-link">
-              <!--<a href="https://github.com/arctadapt/Etudiant" target="_blank"><i class="fab fa-github"></i></a> -->
-              <!-- <a href="#" target="_blank"><i class="fas fa-globe"></i></a> -->
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- <a href="#" class="btn btn-secondary"
-        target="_blank" >See More <i class="fas fa-arrow-right"></i
-      ></a> -->
-    </section>
-
-    <footer id="footer">
-      <div class="container">
-        <a href="mailto:mochammadsyamihardiana@gmail.com">mochammadsyamihardiana@gmail.com</a>
-        <!-- Social links -->
-        <div class="social">
-          <a href="https://www.linkedin.com/in/syamihardyana/" target="_blank"><img src="./assets/linkedin-icon.svg" alt="Linkedin"/></a>
-          <a href="https://github.com/arctadapt" target="_blank"><img src="./assets/github-icon.svg" alt="GitHub" /></a>
-        </div>
-        <!-- Attribution -->
-        <div class="attribution">
-          <a
-            href="https://github.com/CommunityPro/portfolio-html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-          </a>
-        </div>
-      </div>
-    </footer>
-    <script src="js/script.js"></script>
-  </body>
+<section id="kontak" class="wrap sec contact">
+  <h2 class="rv">Mari bekerja sama</h2>
+  <p class="sub rv">Terbuka untuk peran backend atau QA. Email adalah cara tercepat.</p>
+  <a class="mail rv" href="mailto:mochammadsyamihardiana@gmail.com">mochammadsyamihardiana@gmail.com</a>
+  <p class="links rv"><a href="https://linkedin.com/in/syamihardyana" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/arctadapt" target="_blank" rel="noopener">GitHub</a><a href="https://www.instagram.com/zsevenss" target="_blank" rel="noopener">Instagram</a><a href="cv.pdf" target="_blank" rel="noopener">CV (PDF)</a></p>
+</section>
+</main>
+<footer class="wrap foot">© <span id="year"></span> Sam</footer>
+<script src="js/script.js"></script>
+</body>
 </html>

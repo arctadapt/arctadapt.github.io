@@ -1,67 +1,92 @@
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+document.documentElement.classList.add("js");
+$("#year").textContent = new Date().getFullYear();
 
-hamburger.addEventListener("click", mobileMenu);
+// Tema
+$("#theme").addEventListener("click", () => {
+  const t = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = t;
+  try { localStorage.setItem("theme", t); } catch (e) {}
+});
 
-function mobileMenu() {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
-}
+// Menu mobile
+const burger = $("#burger"), menu = $("#menu");
+const setMenu = (o) => { menu.classList.toggle("open", o); burger.setAttribute("aria-expanded", o); };
+burger.addEventListener("click", () => setMenu(!menu.classList.contains("open")));
+$$("#menu a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
 
-// Close navbar when link is clicked
-const navLink = document.querySelectorAll(".nav-link");
+// Progress bar + garis timeline
+const bar = $(".progress"), tl = $(".tl");
+const onScroll = () => {
+  const h = document.documentElement.scrollHeight - innerHeight;
+  bar.style.transform = `scaleX(${h > 0 ? scrollY / h : 0})`;
+  const r = tl.getBoundingClientRect();
+  tl.style.setProperty("--p", Math.min(1, Math.max(0, (innerHeight * 0.65 - r.top) / r.height)));
+};
+addEventListener("scroll", onScroll, { passive: true }); onScroll();
 
-navLink.forEach((n) => n.addEventListener("click", closeMenu));
+// Reveal saat scroll (dengan jeda berurutan antar elemen bersaudara)
+const io = new IntersectionObserver((es) => es.forEach((e) => {
+  if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+}), { threshold: 0.15 });
+$$(".rv").forEach((el) => {
+  el.style.setProperty("--d", [...el.parentElement.children].filter((c) => c.classList.contains("rv")).indexOf(el) * 0.09 + "s");
+  io.observe(el);
+});
 
-function closeMenu() {
-  hamburger.classList.remove("active");
-  navMenu.classList.remove("active");
-}
+// Menu aktif sesuai bagian yang terlihat
+const links = $$("#menu a[href^='#']");
+const spy = new IntersectionObserver((es) => es.forEach((e) => {
+  if (e.isIntersecting) links.forEach((a) => a.classList.toggle("on", a.hash === "#" + e.target.id));
+}), { rootMargin: "-45% 0px -50% 0px" });
+$$("main section").forEach((s) => spy.observe(s));
 
-// Event Listeners: Handling toggle event
-const toggleSwitch = document.querySelector(
-  '.theme-switch input[type="checkbox"]'
-);
+// Hitung naik angka statistik
+const count = new IntersectionObserver((es) => es.forEach((e) => {
+  if (!e.isIntersecting) return; count.unobserve(e.target);
+  const el = e.target, n = +el.dataset.n, suf = el.dataset.suf || "";
+  if (reduce) { el.textContent = n + suf; return; }
+  const t0 = performance.now();
+  (function tick(t) {
+    const p = Math.min(1, (t - t0) / 1400);
+    el.textContent = Math.round(n * (1 - Math.pow(1 - p, 3))) + suf;
+    if (p < 1) requestAnimationFrame(tick);
+  })(t0);
+}), { threshold: 0.6 });
+$$("[data-n]").forEach((el) => count.observe(el));
 
-function switchTheme(e) {
-  if (e.target.checked) {
-    document.documentElement.setAttribute("data-theme", "dark");
-  } else {
-    document.documentElement.setAttribute("data-theme", "light");
+// Terminal: baris diketik satu per satu lalu muncul ringkasan
+const lines = $$("#term li"), sum = $("#sum");
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+async function run() {
+  if (reduce) { lines.forEach((l) => l.classList.add("in")); sum.classList.add("in"); return; }
+  const texts = lines.map((l) => l.dataset.t);
+  lines.forEach((l) => (l.textContent = ""));
+  await sleep(1100);
+  for (let i = 0; i < lines.length; i++) {
+    lines[i].classList.add("in", "typing");
+    for (const ch of texts[i]) { lines[i].textContent += ch; await sleep(14); }
+    lines[i].classList.remove("typing"); await sleep(180);
   }
+  sum.classList.add("in");
 }
+run();
 
-toggleSwitch.addEventListener("change", switchTheme, false);
+// Buka-tutup detail proyek
+$$(".card-h").forEach((b) => b.addEventListener("click", () => {
+  const card = b.closest(".card"), open = card.classList.toggle("open");
+  b.setAttribute("aria-expanded", open);
+}));
 
-//  Store color theme for future visits
-
-function switchTheme(e) {
-  if (e.target.checked) {
-    document.documentElement.setAttribute("data-theme", "dark");
-    localStorage.setItem("theme", "dark"); //add this
-  } else {
-    document.documentElement.setAttribute("data-theme", "light");
-    localStorage.setItem("theme", "light"); //add this
-  }
+// Kemiringan halus mengikuti kursor (hanya perangkat dengan mouse)
+if (!reduce && matchMedia("(hover: hover)").matches) {
+  $$("[data-tilt]").forEach((el) => {
+    el.addEventListener("pointermove", (e) => {
+      const r = el.getBoundingClientRect();
+      el.style.setProperty("--ry", ((e.clientX - r.left) / r.width - 0.5) * 6 + "deg");
+      el.style.setProperty("--rx", (0.5 - (e.clientY - r.top) / r.height) * 6 + "deg");
+    });
+    el.addEventListener("pointerleave", () => { el.style.setProperty("--rx", "0deg"); el.style.setProperty("--ry", "0deg"); });
+  });
 }
-
-// Save user preference on load
-
-const currentTheme = localStorage.getItem("theme")
-  ? localStorage.getItem("theme")
-  : null;
-
-if (currentTheme) {
-  document.documentElement.setAttribute("data-theme", currentTheme);
-
-  if (currentTheme === "dark") {
-    toggleSwitch.checked = true;
-  }
-}
-
-//Adding date
-
-let myDate = document.querySelector("#datee");
-
-const yes = new Date().getFullYear();
-myDate.innerHTML = yes;
