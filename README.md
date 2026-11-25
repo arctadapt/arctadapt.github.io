@@ -12,6 +12,8 @@ A responsive, single-page developer portfolio built with HTML, CSS, and JavaScri
 | --- | --- | --- |
 | **Étudiant** | Online snack ordering website with menu catalog, cart, WhatsApp checkout, user accounts, and admin dashboard. | [Visit Étudiant](https://etudiant-ux.vercel.app/) |
 | **Arsiva** | School inventory and room borrowing management system with request approvals and borrowing history. | [Visit Arsiva](https://v0-arsiva.vercel.app/) |
+| **School Sync** | School gate permissions, lateness records, inter-campus transfers, and administrative workflows. | [Visit School Sync](https://school-sync-nextjs.vercel.app/) |
+| **ArctaBooth** | Browser-based photobooth with custom templates, timed sessions, and media sharing. | [Visit ArctaBooth](https://photobooth-by-arctadapt.vercel.app/) |
 | **SIMPEL-MUTU (SIAMI)** | Higher education quality assurance management platform. | — |
 | **Campus Integrator** | Academic data management, validation, and synchronization workflows. | — |
 | **Migrant Center** | Backend services for migrant profiles, jobs, applications, and placement. | — |
